@@ -2,12 +2,12 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 %bcond_without	static_libs	# don't build static libraries
-#
+
 Summary:	Lasem - MathML and SVG rendering library
 Summary(pl.UTF-8):	Lasem - biblioteka do renderowania MathML i SVG
 Name:		lasem
 Version:	0.4.1
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/lasem/0.4/%{name}-%{version}.tar.xz
@@ -78,6 +78,9 @@ Statyczna biblioteka lasem.
 Summary:	lasem API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki lasem
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for lasem library.
@@ -97,7 +100,6 @@ Dokumentacja API biblioteki lasem.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
