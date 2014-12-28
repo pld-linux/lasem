@@ -17,7 +17,7 @@ BuildRequires:	bison
 BuildRequires:	cairo-devel >= 1.2
 BuildRequires:	flex
 BuildRequires:	gdk-pixbuf2-devel >= 2.16
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	gobject-introspection-devel >= 0.6.7
 BuildRequires:	gtk-doc >= 1.14
