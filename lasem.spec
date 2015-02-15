@@ -6,12 +6,12 @@
 Summary:	Lasem - MathML and SVG rendering library
 Summary(pl.UTF-8):	Lasem - biblioteka do renderowania MathML i SVG
 Name:		lasem
-Version:	0.4.1
-Release:	3
+Version:	0.4.2
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/lasem/0.4/%{name}-%{version}.tar.xz
-# Source0-md5:	05f24217fbd83504a3d867e6d71909ed
+# Source0-md5:	5b6fee3f405b3d1ad69bd821d9b328d7
 URL:		http://live.gnome.org/Lasem
 BuildRequires:	bison
 BuildRequires:	cairo-devel >= 1.2
@@ -108,6 +108,9 @@ rm -rf $RPM_BUILD_ROOT
 # packaged as %doc
 %{__rm} -r $RPM_BUILD_ROOT%{_prefix}/doc/lasem-0.4
 
+# fix extension
+%{__mv} $RPM_BUILD_ROOT%{_mandir}/man1/lasem-render-0.4{,.1}
+
 %find_lang %{name}-0.4
 
 %clean
@@ -123,6 +126,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/liblasem-0.4.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/liblasem-0.4.so.4
 %{_libdir}/girepository-1.0/Lasem-0.4.typelib
+%{_mandir}/man1/lasem-render-0.4.1*
 
 %files devel
 %defattr(644,root,root,755)
