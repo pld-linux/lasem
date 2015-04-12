@@ -7,7 +7,7 @@ Summary:	Lasem - MathML and SVG rendering library
 Summary(pl.UTF-8):	Lasem - biblioteka do renderowania MathML i SVG
 Name:		lasem
 Version:	0.4.3
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/lasem/0.4/%{name}-%{version}.tar.xz
