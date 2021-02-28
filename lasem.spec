@@ -78,9 +78,7 @@ Statyczna biblioteka lasem.
 Summary:	lasem API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki lasem
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for lasem library.
